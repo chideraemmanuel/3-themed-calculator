@@ -1,0 +1,68 @@
+:root {
+  /* Backgrounds */
+  --main-bg2: hsl(0, 0%, 90%);
+  --keypad-bg2: hsl(0, 5%, 81%);
+  --display-bg2: hsl(0, 0%, 93%);
+
+  /* Keys */
+
+  --del-key-bg2: hsl(185, 42%, 37%);
+  --del-key-shadow2: hsl(185, 58%, 25%);
+
+  --eq-key-bg2: hsl(25, 98%, 40%);
+  --eq-key-shadow2: hsl(25, 99%, 27%);
+
+  --num-key-bg2: hsl(45, 7%, 89%);
+  --num-key-shadow: hsl(35, 11%, 61%);
+
+  /* Text */
+
+  --text-color2: hsl(60, 10%, 19%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body.t2 {
+  background-color: var(--main-bg2);
+}
+
+body.t2 .header {
+  color: var(--text-color2);
+}
+
+body.t2 .header__theme--toggler__button {
+  background-color: var(--keypad-bg2);
+}
+
+body.t2 .header__theme--toggler__button .circle {
+  background-color: var(--eq-key-bg2);
+}
+
+body.t2 .display {
+  background-color: var(--display-bg2);
+  color: var(--text-color2);
+}
+
+body.t2 .buttons {
+  background-color: var(--keypad-bg2);
+  color: var(--text-color2);
+}
+
+body.t2 .buttons button.number,
+body.t2 .buttons button.operator,
+body.t2 .buttons button.dot {
+  background-color: var(--num-key-bg2);
+  box-shadow: inset 0 -3px 0 var(--num-key-shadow2);
+}
+
+body.t2 .buttons button.del,
+body.t2 .buttons button.reset {
+  background-color: var(--del-key-bg2);
+  color: var(--white);
+  box-shadow: inset 0 -3px 0 var(--del-key-shadow2);
+}
+
+body.t2 .buttons button.evaluate {
+  background-color: var(--eq-key-bg2);
+  color: var(--white);
+  box-shadow: inset 0 -3px 0 var(--eq-key-shadow2);
+}

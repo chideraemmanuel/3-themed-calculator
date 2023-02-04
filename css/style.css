@@ -1,0 +1,166 @@
+@import url(./theme1.css);
+@import url(./theme2.css);
+@import url(./theme3.css);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: 0.5s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 400px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.header__theme {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.header__theme--text {
+  font-size: 0.6rem;
+  margin-bottom: 3px;
+}
+
+.header__theme--toggler {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header__theme--toggler__numbers {
+  display: flex;
+  justify-content: space-between;
+  width: 40px;
+  margin: 0 auto;
+  font-size: 0.7rem;
+}
+
+.header__theme--toggler__button {
+  width: 50px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  border-radius: 40px;
+}
+
+.header__theme--toggler__button .circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body.t1 .circle:nth-child(2),
+body.t1 .circle:last-child {
+  opacity: 0;
+}
+
+body.t2 .circle:first-child,
+body.t2 .circle:last-child {
+  opacity: 0;
+}
+
+body.t3 .circle:nth-child(2),
+body.t3 .circle:first-child {
+  opacity: 0;
+}
+
+.display {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: 70px;
+  overflow: hidden;
+  cursor: default;
+}
+
+.buttons {
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.buttons button {
+  padding: 5px 0;
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.buttons button:hover {
+  transform: scale(1.03);
+  opacity: 0.8;
+}
+
+.buttons button.number,
+.buttons button.operator,
+.buttons button.dot {
+  font-size: 32px;
+}
+
+.buttons button.del,
+.buttons button.reset {
+  font-size: 20px;
+}
+
+.buttons button.reset {
+  grid-column: span 2;
+}
+
+.buttons button.evaluate {
+  font-size: 32px;
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 300px;
+  }
+}
